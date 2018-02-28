@@ -3,11 +3,6 @@ const menu = [
     id: "home",
     link: "",
     text: "home"
-  },
-  {
-    id: "save images",
-    link: "save",
-    text: "save images"
   }
 ];
 
