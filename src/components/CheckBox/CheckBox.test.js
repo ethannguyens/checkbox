@@ -24,7 +24,7 @@ function setup() {
   return {
     props,
     wrapper
-  }
+  };
 }
 
 describe('CheckBox Component', () => {
