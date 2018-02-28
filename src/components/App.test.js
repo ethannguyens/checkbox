@@ -27,7 +27,7 @@ describe('App', () => {
     // Arrange & Act
     const {wrapper} = setup();
     // Assert
-    expect(wrapper.find('App').hasClass('nguyene-insta-flickr')).toBe(true);
+    expect(wrapper.find('App').hasClass('nguyene-check-box')).toBe(true);
   });
 
   it('should render Header', () => {
