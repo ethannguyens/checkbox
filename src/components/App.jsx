@@ -32,7 +32,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className='nguyene-insta-flickr' ref={(div) => {this.div = div;}}>
+      <div className='nguyene-check-box' ref={(div) => {this.div = div;}}>
         <Header menu={this.menu}/>
         {this.props.children}
         <Footer footer={this.footer}
