@@ -1,0 +1,21 @@
+.CheckBox {
+  margin: 5% auto;
+  width: 50%;
+}
+
+.CheckBox-li {
+  cursor: pointer;
+}
+.CheckBox-radio {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  border: solid 1px #000;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+
+.CheckBox-radio.checked {
+  background: #0099ff;
+}

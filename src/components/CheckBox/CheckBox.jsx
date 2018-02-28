@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as checkBoxActions from '../../actions/checkBoxAction';
 
+require('./CheckBox.scss');
+
 class CheckBox extends React.Component {
   constructor(props, context) {
     super(props, context);
