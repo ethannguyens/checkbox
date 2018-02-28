@@ -9,6 +9,21 @@ require('./CheckBox.scss');
 class CheckBox extends React.Component {
   constructor(props, context) {
     super(props, context);
+
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick(item) {
+    let selectedItems = [...this.props.checkBox.selectedItems];
+    let elementIndex = selectedItems.indexOf(item);
+
+    if (elementIndex >= 0) {
+      selectedItems.splice(elementIndex, 1);
+      this.props.actions.updateSelectedItems(selectedItems);
+    } else  {
+      selectedItems.push(item);
+      this.props.actions.updateSelectedItems(selectedItems);
+    }
   }
 
   render() {
@@ -16,8 +31,8 @@ class CheckBox extends React.Component {
       <div className="CheckBox">
         {this.props.checkBox.items.map((item, i) => {
           return (
-            <div key={i} className="CheckBox-li" >
-              <span className="CheckBox-radio" />
+            <div key={i} className="CheckBox-li" onClick={() => this.onClick(i)}>
+              <span className={`CheckBox-radio  ${this.props.checkBox.selectedItems.indexOf(i) >=0 ? "checked" : ""}`} />
               <span className="CheckBox-label">{item}</span>
             </div>
           )
